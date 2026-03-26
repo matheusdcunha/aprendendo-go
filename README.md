@@ -1,2 +1,3 @@
-# aprendendo-go
-Códigos dos meus estudos sobre Go
+# Aprendendo Go
+
+Esse repositório contem meus estudos de Go.
