@@ -1,3 +1,3 @@
 # Aprendendo Go
 
-Esse repositório contem meus estudos de Go.
+Esse repositório contém meus estudos de Go.
