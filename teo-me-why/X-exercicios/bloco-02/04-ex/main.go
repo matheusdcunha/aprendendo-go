@@ -10,10 +10,10 @@ import (
 func main() {
 	fmt.Println("Digite um número inteiro que deseja saber a raiz quadrada:")
 
-	var numero float64
+	var numero int
 	fmt.Scanf("%f", &numero)
 
-	raizQuadrada := math.Sqrt(numero)
+	raizQuadrada := math.Sqrt(float64(numero))
 
-	fmt.Printf("A raiz quadrada de %f é %f\n", numero, raizQuadrada)
+	fmt.Printf("A raiz quadrada de %d é %.2f\n", numero, raizQuadrada)
 }
