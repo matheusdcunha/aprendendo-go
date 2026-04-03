@@ -13,10 +13,10 @@ import (
 func main() {
 
 	frases := map[string]int{}
+	scanner := bufio.NewScanner(os.Stdin)
 
 	for {
 		fmt.Printf("Informe uma frase: ")
-		scanner := bufio.NewScanner(os.Stdin)
 		scanner.Scan()
 		frase := strings.TrimSpace(scanner.Text())
 

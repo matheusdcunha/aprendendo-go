@@ -7,22 +7,10 @@ import (
 	"strconv"
 )
 
-func contagem(lista []int, numero int) (res int) {
-	res = 0
-
-	for _, v := range lista {
-		if v == numero {
-			res++
-		}
-	}
-
-	return
-}
-
 func main() {
 	fmt.Println("Informe uma lista de números inteiros")
 
-	lista := []int{}
+	contagem := map[int]int{}
 
 	i := 1
 	for {
@@ -42,7 +30,7 @@ func main() {
 			continue
 		}
 
-		lista = append(lista, n)
+		contagem[n]++
 		i++
 	}
 
@@ -58,7 +46,7 @@ func main() {
 		fmt.Printf(`---
 O número %d aparece %d vezes
 ---
-`, numero, contagem(lista, numero))
+`, numero, contagem[numero])
 	}
 
 }
