@@ -1,4 +1,4 @@
-# Let's Go Futher
+# Let's Go Further
 
 Essa é a sessão que vai conter os códigos do projeto do livro: 
 
