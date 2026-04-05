@@ -2,7 +2,7 @@
 
 Essa é a sessão que vai conter os códigos do projeto do livro: 
 
-- [Let's Go Futher](https://lets-go-further.alexedwards.net/)
+- [Let's Go Further](https://lets-go-further.alexedwards.net/)
 
 ## O projeto
 
