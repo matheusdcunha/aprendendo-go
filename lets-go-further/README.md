@@ -4,6 +4,10 @@ Essa é a sessão que vai conter os códigos do projeto do livro:
 
 - **[Let's Go Further](https://lets-go-further.alexedwards.net/)**
 
+>[!caution]
+>**Projeto está congelado no momento.**
+>Eu optei por estudar outras coisas no momento, depois volto ao estudo desse livro.
+
 ---
 
 ## O projeto
