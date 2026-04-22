@@ -5,7 +5,11 @@ import (
 	"github.com/matheusdcunha/aprendendo-go/meu-primeiro-crud-go/src/config/logger"
 	"github.com/matheusdcunha/aprendendo-go/meu-primeiro-crud-go/src/config/validation"
 	"github.com/matheusdcunha/aprendendo-go/meu-primeiro-crud-go/src/controller/model/request"
-	"github.com/matheusdcunha/aprendendo-go/meu-primeiro-crud-go/src/controller/model/response"
+	"github.com/matheusdcunha/aprendendo-go/meu-primeiro-crud-go/src/model"
+)
+
+var (
+	UserDomainInterface model.UserDomainInterface
 )
 
 func CreateUser(c *gin.Context) {
@@ -20,14 +24,14 @@ func CreateUser(c *gin.Context) {
 		return
 	}
 
-	userResponse := response.UserResponse{
-		Id:    "1",
-		Email: userRequest.Email,
-		Name:  userRequest.Name,
-		Age:   userRequest.Age,
+	domain := model.NewUserDomain(userRequest.Email, userRequest.Password, userRequest.Name, userRequest.Age)
+
+	if err := domain.CreateUser(); err != nil {
+		c.JSON(err.Code, err)
+		return
 	}
 
 	logger.Info("user created sucessfully", logger.CreateUserJourney)
 
-	c.JSON(201, userResponse)
+	c.String(201, "")
 }
